@@ -47,8 +47,9 @@ hr {
 }
 
 form {
+  display: flex;
+  justify-content: space-between;
   margin-top: 25px;
-  width: 100%;
 }
 
 input[type="text"] {
