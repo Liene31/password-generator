@@ -92,11 +92,22 @@ const characters = [
   "/",
 ];
 
-function generatePassword() {
-  let randomIndexOne = Math.floor(Math.random() * characters.length);
-  let randomIndexTwo = Math.floor(Math.random() * characters.length);
+let passwordArr = "";
 
-  console.log(`${characters[randomIndexOne]}${characters[randomIndexTwo]}`);
+let i = 0;
+
+function generatePassword() {
+  //
+  // let randomIndexTwo = Math.floor(Math.random() * characters.length);
+
+  // console.log(`${characters[randomIndexOne]}${characters[randomIndexTwo]}`);
+
+  for (i; i < 15; i++) {
+    let randomIndex = Math.floor(Math.random() * characters.length);
+    let randomCharacters = characters[randomIndex];
+    passwordArr += randomCharacters;
+    console.log(passwordArr);
+  }
 }
 
 let btnEl = document.querySelector("button");
