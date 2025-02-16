@@ -92,16 +92,20 @@ const characters = [
   "/",
 ];
 
-let passwordArr = "";
+let passwordOne = "";
+let passwordTwo = "";
 let i = 0;
 
 function generatePassword() {
   for (i; i < 15; i++) {
-    let randomIndex = Math.floor(Math.random() * characters.length);
-    let randomCharacters = characters[randomIndex];
-    passwordArr += randomCharacters;
-    document.querySelector("#password-one").value = passwordArr;
-    document.querySelector("#password-two").value = passwordArr;
+    let randomIndexOne = Math.floor(Math.random() * characters.length);
+    let randomIndexTwo = Math.floor(Math.random() * characters.length);
+    let randomCharactersOne = characters[randomIndexOne];
+    let randomCharactersTwo = characters[randomIndexTwo];
+    passwordOne += randomCharactersOne;
+    passwordTwo += randomCharactersTwo;
+    document.querySelector("#password-one").value = passwordOne;
+    document.querySelector("#password-two").value = passwordTwo;
   }
 }
 
