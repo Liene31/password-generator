@@ -100,10 +100,8 @@ function generatePassword() {
   for (i; i < 15; i++) {
     let randomIndexOne = Math.floor(Math.random() * characters.length);
     let randomIndexTwo = Math.floor(Math.random() * characters.length);
-    let randomCharactersOne = characters[randomIndexOne];
-    let randomCharactersTwo = characters[randomIndexTwo];
-    passwordOne += randomCharactersOne;
-    passwordTwo += randomCharactersTwo;
+    passwordOne += characters[randomIndexOne];
+    passwordTwo += characters[randomIndexTwo];
     document.querySelector("#password-one").value = passwordOne;
     document.querySelector("#password-two").value = passwordTwo;
   }
